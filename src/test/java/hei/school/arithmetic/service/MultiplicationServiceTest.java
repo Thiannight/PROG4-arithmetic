@@ -10,8 +10,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class MultiplicationServiceTest {
 
-  @InjectMocks
-  private MultiplicationService multiplicationService;
+  @InjectMocks private MultiplicationService multiplicationService;
 
   @Test
   void multiply_two_positive_numbers() {

@@ -11,8 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class DivisionServiceTest {
 
-  @InjectMocks
-  private DivisionService divisionService;
+  @InjectMocks private DivisionService divisionService;
 
   @Test
   void divide_two_positive_numbers() {
@@ -36,7 +35,8 @@ class DivisionServiceTest {
 
   @Test
   void divide_by_zero_throws_exception() {
-    ArithmeticException ex = assertThrows(ArithmeticException.class, () -> divisionService.divide(5, 0));
+    ArithmeticException ex =
+        assertThrows(ArithmeticException.class, () -> divisionService.divide(5, 0));
     assertEquals("Division by zero is not allowed", ex.getMessage());
   }
 
