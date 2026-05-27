@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class AdditionController {
 
-    private final AdditionService additionService;
+  private final AdditionService additionService;
 
-    @PostMapping("/addition")
-    public OperationResult add(@RequestBody OperationRequest request) {
-        return new OperationResult(additionService.add(request.a(), request.b()));
-    }
+  @PostMapping("/addition")
+  public OperationResult add(@RequestBody OperationRequest request) {
+    return new OperationResult(additionService.add(request.a(), request.b()));
+  }
 }

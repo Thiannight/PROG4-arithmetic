@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class MultiplicationController {
 
-    private final MultiplicationService multiplicationService;
+  private final MultiplicationService multiplicationService;
 
-    @PostMapping("/multiplication")
-    public OperationResult multiply(@RequestBody OperationRequest request) {
-        return new OperationResult(multiplicationService.multiply(request.a(), request.b()));
-    }
+  @PostMapping("/multiplication")
+  public OperationResult multiply(@RequestBody OperationRequest request) {
+    return new OperationResult(multiplicationService.multiply(request.a(), request.b()));
+  }
 }

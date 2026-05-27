@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class SubtractionController {
 
-    private final SubtractionService subtractionService;
+  private final SubtractionService subtractionService;
 
-    @PostMapping("/subtraction")
-    public OperationResult subtract(@RequestBody OperationRequest request) {
-        return new OperationResult(subtractionService.subtract(request.a(), request.b()));
-    }
+  @PostMapping("/subtraction")
+  public OperationResult subtract(@RequestBody OperationRequest request) {
+    return new OperationResult(subtractionService.subtract(request.a(), request.b()));
+  }
 }

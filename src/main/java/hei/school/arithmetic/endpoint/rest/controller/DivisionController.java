@@ -16,14 +16,14 @@ import org.springframework.web.server.ResponseStatusException;
 @AllArgsConstructor
 public class DivisionController {
 
-    private final DivisionService divisionService;
+  private final DivisionService divisionService;
 
-    @PostMapping("/division")
-    public OperationResult divide(@RequestBody OperationRequest request) {
-        try {
-            return new OperationResult(divisionService.divide(request.a(), request.b()));
-        } catch (ArithmeticException e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+  @PostMapping("/division")
+  public OperationResult divide(@RequestBody OperationRequest request) {
+    try {
+      return new OperationResult(divisionService.divide(request.a(), request.b()));
+    } catch (ArithmeticException e) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
     }
+  }
 }
